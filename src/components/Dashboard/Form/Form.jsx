@@ -10,7 +10,7 @@ function Form() {
 
 
   return (
-    <form onSubmit={(event)=> event.preventDefault()}  className="form flex f-column gap-2">
+    <form onSubmit={(event)=> event.preventDefault()}  className="container form flex f-column gap-2">
       <section className="section__description flex f-column">
         <label htmlFor="description">Descrição</label>
         <input className="input-df" type="text" name="description"  id="description" placeholder=" Digite aqui sua descrição"/>
