@@ -4,10 +4,16 @@ import LandPage from './components/LandPage/LandPage.jsx';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  
 
   return (
     <div>
-      <LandPage/>
+      {
+        isLoggedIn ? (
+          <h1>Ola</h1>
+        ):
+      <LandPage setIsLoggedIn={setIsLoggedIn} />
+      }
     </div>
   );
 }
