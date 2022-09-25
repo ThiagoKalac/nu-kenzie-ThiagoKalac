@@ -1,0 +1,14 @@
+.btn{
+    padding: 13px 20px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font: var(--text-btn);
+    color: var(--gray-3);
+    background-color: var(--gray-2);
+}
+
+.btn__main{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}

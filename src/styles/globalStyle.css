@@ -1,34 +1,51 @@
 :root{
+  /* main colors */
   --color-primary:  #FD377E;
   --color-primary-2:#E34981;
   --color-secundary:#03B898;
-
+  
+  /* shades of gray */
   --gray-4:#212529;
   --gray-3:#868E96;
   --gray-2:#E9ECEF;
   --gray-1:#F8F9FA;
 
+  /* other colors */
+  --color-white:#ffffff;
+
   /* font */
   --font: 'Nunito', sans-serif;
+  --font-btn: 'Inter', sans-serif;
 
   /* font-size  */
-  --f-size-1:28px;
-  --f-size-2:24px;
-  --f-size-3:20px;
-  --f-size-4:16px;
-  --f-size-5:12px;
+  --f-size-1:38px;
+  --f-size-2:28px;
+  --f-size-3:24px;
+  --f-size-4:20px;
+  --f-size-5:16px;
+  --f-size-6:12px;
 
   /* font-weight */
   --f-bold:700;
+  --f-medium:500;
   --f-regular:400;
 
   /* config text */
+  --logo:    var(--f-bold)    var(--f-size-2) var(--font);
   --title-1: var(--f-bold)    var(--f-size-1) var(--font);
-  --title-2: var(--f-bold)    var(--f-size-2) var(--font);
-  --title-3: var(--f-bold)    var(--f-size-3) var(--font);
-  --title-4: var(--f-bold)    var(--f-size-5) var(--font);
-  --body:    var(--f-regular) var(--f-size-5) var(--font);
-  --headline:var(--f-regular) var(--f-size-4) var(--font);
+  --title-2: var(--f-bold)    var(--f-size-3) var(--font);
+  --title-3: var(--f-bold)    var(--f-size-4) var(--font);
+  --title-4: var(--f-bold)    var(--f-size-6) var(--font);
+  --body:    var(--f-regular) var(--f-size-6) var(--font);
+  --headline:var(--f-regular) var(--f-size-5) var(--font);
+  --text-btn:var(--f-medium) var(--f-size-5) var(--font-btn);
+  
+}
 
+.container{
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
 }
 
