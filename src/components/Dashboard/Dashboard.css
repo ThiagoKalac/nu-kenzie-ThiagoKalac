@@ -1,5 +1,5 @@
 .containerDashboard{
-    background-color: whitesmoke;
+    background-color: var(--color-white);
     width: 100vw;
     height: 100vh;
 }

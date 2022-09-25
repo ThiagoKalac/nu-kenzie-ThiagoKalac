@@ -16,7 +16,7 @@
 
   /* font */
   --font: 'Nunito', sans-serif;
-  --font-btn: 'Inter', sans-serif;
+  --font-secundary: 'Inter', sans-serif;
 
   /* font-size  */
   --f-size-1:38px;
@@ -32,14 +32,15 @@
   --f-regular:400;
 
   /* config text */
-  --logo:    var(--f-bold)    var(--f-size-2) var(--font);
-  --title-1: var(--f-bold)    var(--f-size-1) var(--font);
-  --title-2: var(--f-bold)    var(--f-size-3) var(--font);
-  --title-3: var(--f-bold)    var(--f-size-4) var(--font);
-  --title-4: var(--f-bold)    var(--f-size-6) var(--font);
-  --body:    var(--f-regular) var(--f-size-6) var(--font);
-  --headline:var(--f-regular) var(--f-size-5) var(--font);
-  --text-btn:var(--f-medium) var(--f-size-5) var(--font-btn);
+  --logo:     var(--f-bold)    var(--f-size-2) var(--font);
+  --title-1:  var(--f-bold)    var(--f-size-1) var(--font);
+  --title-2:  var(--f-bold)    var(--f-size-3) var(--font);
+  --title-3:  var(--f-bold)    var(--f-size-4) var(--font);
+  --title-4:  var(--f-bold)    var(--f-size-6) var(--font);
+  --body:     var(--f-regular) var(--f-size-6) var(--font);
+  --headline: var(--f-regular) var(--f-size-5) var(--font);
+  --text-btn: var(--f-medium)  var(--f-size-5) var(--font-secundary);
+  --text-form:var(--f-regular) var(--f-size-6) var(--font-secundary);
   
 }
 
