@@ -1,5 +1,5 @@
-import illustration from "../../assets/illustration.svg";
-import "./LandPage.css";
+import illustration from "../../assets/illustration.svg"
+import "./LandPage.css"
 
 function LandPage({setIsLoggedIn}) {
 
@@ -26,4 +26,4 @@ function LandPage({setIsLoggedIn}) {
   );
 }
 
-export default LandPage;
+export default LandPage

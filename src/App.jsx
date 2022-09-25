@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import './App.css';
-import LandPage from './components/LandPage/LandPage.jsx';
+import { useState } from 'react'
+import './App.css'
+import Dashboard from './components/Dashboard/Dashboard.jsx'
+import LandPage from './components/LandPage/LandPage.jsx'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -10,12 +11,13 @@ function App() {
     <div>
       {
         isLoggedIn ? (
-          <h1>Ola</h1>
-        ):
-      <LandPage setIsLoggedIn={setIsLoggedIn} />
+          <Dashboard setIsLoggedIn={setIsLoggedIn} />
+        ): (
+          <LandPage setIsLoggedIn={setIsLoggedIn} />
+        )
       }
     </div>
   );
 }
 
-export default App;
+export default App
