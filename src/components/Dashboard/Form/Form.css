@@ -1,0 +1,53 @@
+
+.form{
+    width: 508px;
+    max-width: 100%;
+    height: 350px;
+    margin: 16px auto 0px auto;
+    padding: 48px 16px 32px 16px;
+    border: 1px solid var(--gray-2);
+    border-radius: 4px;
+}
+
+.form > button{
+    width: 100%;
+}
+
+.input-df{
+    width: 100%;
+    padding: 13px 0px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--gray-1);
+}
+
+.section__description{
+    width: 100%;
+}
+
+
+label{
+    font: var(--text-form);
+    margin-bottom: 16px;
+}
+
+.section__description > span{
+    margin-top: 6px;
+    font: var(--text-form);
+    color: var(--gray-3)
+}
+
+.div__value{
+    width: 154px;
+}
+
+.div_typeOfValue{
+    width: 40%;
+}
+
+
+@media(min-width:768px){
+    .form{
+        margin: 39px 0px 0px 0px;
+    }
+}

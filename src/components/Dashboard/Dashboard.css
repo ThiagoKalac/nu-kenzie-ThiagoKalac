@@ -1,0 +1,26 @@
+.containerDashboard{
+    background-color: var(--color-white);
+}
+
+@media(min-width:768px){ 
+    .main{
+        display: flex;
+        justify-content: space-between;
+        gap: 78px;
+    }
+   .containerForm{
+      width: 40%;
+      max-width: 100%;
+   }
+
+   .containerList{
+    width: 60%;
+    max-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    display: block;
+   }
+ 
+  
+}   

@@ -1,5 +1,5 @@
-import illustration from "../../assets/illustration.svg";
-import "./LandPage.css";
+import illustration from "../../assets/illustration.svg"
+import "./LandPage.css"
 
 function LandPage({setIsLoggedIn}) {
 
@@ -8,7 +8,7 @@ function LandPage({setIsLoggedIn}) {
     }  
 
   return (
-    <div className="container">
+    <div className="container colorBackground">
       <div className="landPage flex f-column f-justify-center">
         <section className="flex f-column f-align-start gap-1">
           <h1 className="title">
@@ -26,4 +26,4 @@ function LandPage({setIsLoggedIn}) {
   );
 }
 
-export default LandPage;
+export default LandPage
