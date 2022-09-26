@@ -1,7 +1,5 @@
 .containerDashboard{
     background-color: var(--color-white);
-    width: 100vw;
-    height: 100vh;
 }
 
 @media(min-width:768px){ 
@@ -21,6 +19,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+    display: block;
    }
  
   

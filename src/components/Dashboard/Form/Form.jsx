@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./Form.css";
 
-function Form() {
+function Form({listTransictions,setListTransictions}) {
 
   const [inputValue, setInputValue] = useState('')
   const [inputDescription, setinputDescription] = useState('')
-  const [typeOfValue, setTypeOfValue] = useState('moneyDeposit')
+  const [typeOfValue, setTypeOfValue] = useState('null')
 
-  console.log(inputDescription)
+ 
   return (
     <form onSubmit={(event)=> event.preventDefault()}  className="container form flex f-column gap-2">
       <section className="section__description flex f-column">
@@ -26,16 +26,23 @@ function Form() {
         <div className="div_typeOfValue flex f-column">
           <label htmlFor="typeOfValue">Tipo de Valor</label>
           <select className="input-df" id="typeOfValue" value={typeOfValue} onChange={(event)=> setTypeOfValue(event.target.value)}>
-            <option value="moneyDeposit">Entrada</option>
-            <option value="moneyOut">Saída</option>
+            <option value="null">Tipo de Valor</option>
+            <option value="Entrada">Entrada</option>
+            <option value="Saída">Saída</option>
           </select>
         </div>
       </section>
 
 
-      <button className="btn btn__main" type="submit">
-        Inserir Valor
-      </button>
+      <button className="btn btn__main" type="submit" onClick={() => {
+        setListTransictions([...listTransictions, {
+          description: inputDescription,
+          value: typeOfValue == 'Entrada' ? inputValue: -inputValue,
+          type: typeOfValue
+        }])
+        setInputValue('')
+        setinputDescription('')
+      }}>Inserir Valor</button>
     </form>
 
   );

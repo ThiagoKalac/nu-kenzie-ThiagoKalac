@@ -1,9 +1,3 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .navList{
     width: 508px;
     max-width: 100%;
@@ -28,6 +22,40 @@
     padding: 13px 9px;
 }
 
+.listCard{
+    width: 508px;
+    max-width: 100%;
+    height: 208px;
+    margin: 16px auto 0px auto;
+    padding: 16px;
+    border: 1px solid var(--gray-2);
+    border-radius: 4px;
+    overflow: visible;
+}
+
+.listCard > p{
+    font:var(--title-3);
+    margin-bottom: 12px;
+}
+
+.listCard > img{
+    width: 100%;
+    height: 80px;
+}
+
+.illustration--desktop{
+    display: none;
+}
+
+.ulListCard{
+    width: 508px;
+    max-width: 100%;
+    height: 170px;
+    padding: 16px;
+    overflow: auto;
+    gap: 16px;
+}
+
 @media(min-width:768px){
     .navList{
         margin: 39px 0px 0px 0px;
@@ -42,5 +70,32 @@
     
     .navList > nav{
         width: 268px;
+    }
+
+    .listCard{
+        width: 100%;
+        height: 618px;
+        border: unset;
+        padding: unset;
+    }
+
+    .listCard > img{
+        height: unset;
+    }
+
+    .illustration--desktop{
+        display: unset;
+    }
+
+    .illustration--mobile{
+        display: none;
+    }
+
+    .ulListCard{
+        width: 100%;
+        height: 618px;
+        border: unset;
+        padding: unset;
+        flex-direction: column;
     }
 }
