@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navList{
+    width: 508px;
+    max-width: 100%;
+    margin: 16px auto 0px auto;
+    padding: 16px;
+    border: 1px solid var(--gray-2);
+    border-radius: 4px;
+}
+
+.navList > p{
+    font:var(--title-3);
+    color:var(--gray-4);
+}
+
+.navList > nav{
+    max-width: 100%;
+}
+
+.navList nav > button{
+    width: 108px;
+    max-width: 100%;
+    padding: 13px 9px;
+}
+
+@media(min-width:768px){
+    .navList{
+        margin: 39px 0px 0px 0px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: unset;
+        border: unset;
+        border-radius: unset;
+    }
+    
+    .navList > nav{
+        width: 268px;
+    }
+}

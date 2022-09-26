@@ -4,16 +4,15 @@ import "./Form.css";
 function Form() {
 
   const [inputValue, setInputValue] = useState('')
+  const [inputDescription, setinputDescription] = useState('')
   const [typeOfValue, setTypeOfValue] = useState('moneyDeposit')
 
-
-
-
+  console.log(inputDescription)
   return (
     <form onSubmit={(event)=> event.preventDefault()}  className="container form flex f-column gap-2">
       <section className="section__description flex f-column">
         <label htmlFor="description">Descrição</label>
-        <input className="input-df" type="text" name="description"  id="description" placeholder=" Digite aqui sua descrição"/>
+        <input className="input-df" type="text" name="description"  id="description" placeholder=" Digite aqui sua descrição" value={inputDescription} onChange={(event)=> setinputDescription(event.target.value)}/>
         <span>Ex: Compras de roupas</span>
       </section>
 
