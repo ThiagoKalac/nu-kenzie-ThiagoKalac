@@ -1,0 +1,27 @@
+.sectionTotalMoney{
+    width: 508px;
+    max-width: 100%;
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid var(--gray-2);
+    border-radius: 4px;
+}
+
+.sectionTotalMoney > div{
+    margin-bottom: 16px;
+}
+
+
+.totalMoney__text{
+    font:var(--title-3);
+    color: var(--gray-4);
+}
+
+.totalMoney__text--value{
+    color: var(--color-primary);
+}
+
+.spanDescriptionTotalMoney{
+    font: var(--body);
+    color:var(--gray-3);
+}

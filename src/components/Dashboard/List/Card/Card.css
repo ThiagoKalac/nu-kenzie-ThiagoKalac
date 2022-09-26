@@ -1,0 +1,61 @@
+.card{
+    list-style: none;
+    min-width: 366px;
+    background-color: var(--gray-1);
+    height: 80px;
+    display: flex;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.card--deposit{
+    border-left: 7px solid var(--color-secundary);
+}
+
+.card--moneyOut{
+    border-left: 7px solid var(--gray-2);
+}
+
+.card > div{
+    width: 100%;
+
+}
+
+.text__cardDescription{
+    font: var(--title-3);
+    color: var(--gray-4);
+}
+
+.text__card{
+    font: var(--body);
+    color: var(--gray-4);
+    gap:22px
+}
+
+.text__card > button{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border: none;
+    color: var(--gray-4);
+    background-color: var(--gray-2);
+    border-radius: 4px;
+}
+
+.text__card > button:hover{
+   color: var(--gray-1);
+   background-color: var(--gray-4);
+}
+
+.text__card > button:active{
+    color: var(--gray-1);
+    background-color: var(--gray-4);
+}
+
+@media(min-width:768px){
+    .card > div{
+        width: 100%;
+    }
+}

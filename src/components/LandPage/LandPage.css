@@ -1,0 +1,78 @@
+.colorBackground{
+    background-color: var(--gray-4);
+    width: 100vw;
+    height: 100vh;
+}
+
+.landPage{
+    height: 90vh;
+    max-width: 100%;
+}
+
+.landPage > section{
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+
+}
+
+.title{
+    font:  var(--logo);
+    color: var(--color-white);
+}
+
+.title > span{
+    color: var(--color-primary);
+}
+
+.slogan{
+    font:  var(--title-1);
+    color: var(--color-white);
+   
+}
+
+.slogan__headline{
+    font:  var(--headline);
+    color: var(--color-white);
+}
+
+button{    
+    width: 210px;
+    max-width: 100%;
+}
+
+
+
+
+.illustration{
+    height: 300px;
+    position: absolute;
+    top: 200px;
+    bottom: 200px;
+    opacity: 0.4;
+}
+
+@media(min-width: 768px){
+    .landPage{
+       flex-direction: row;
+       align-items: center;
+    }
+
+    .landPage > section{
+        position: unset;
+        z-index: unset;
+        margin: unset;
+    }
+
+    .illustration{
+        width: 600px;
+        max-width: 100%;
+        height: unset;
+        position: unset;
+        top: unset;
+        bottom: unset;
+        opacity: unset;
+    }
+}
