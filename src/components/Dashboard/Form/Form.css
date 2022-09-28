@@ -1,3 +1,9 @@
+.Toastify__close-button {
+    position: absolute;
+    transform: translateX(100px);
+    right: 10px;
+    top: 10px;
+}
 
 .form{
     width: 508px;
@@ -39,7 +45,24 @@ label{
 
 .div__value{
     width: 154px;
+    position: relative;
 }
+
+.textRS{
+    position: absolute;
+    top: 43px;
+    right: 8px;
+    font: var(--font-secundary);
+    color: var(--gray-4);
+    font-weight: var( --f-bold);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+}
+
 
 .div_typeOfValue{
     width: 40%;

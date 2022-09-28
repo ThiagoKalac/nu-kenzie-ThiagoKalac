@@ -1,11 +1,18 @@
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 import "./Form.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 function Form({listTransictions,setListTransictions}) {
+
+
+
 
   const [inputValue, setInputValue] = useState('')
   const [inputDescription, setinputDescription] = useState('')
   const [typeOfValue, setTypeOfValue] = useState('null')
+
+  
 
  
   return (
@@ -20,7 +27,8 @@ function Form({listTransictions,setListTransictions}) {
 
         <div className="div__value flex f-column">
           <label htmlFor="value">Valor</label>
-          <input className="input-df" type="number" name="value" id="value" placeholder="1" value={inputValue} onChange={(event)=> setInputValue(event.target.value)}/>
+          <input className="input-df" type="number" name="value" id="value" placeholder="  1" value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
+          <p className="textRS">R$</p>
         </div>
 
         <div className="div_typeOfValue flex f-column">
@@ -35,14 +43,46 @@ function Form({listTransictions,setListTransictions}) {
 
 
       <button className="btn btn__main" type="submit" onClick={() => {
-        setListTransictions([...listTransictions, {
-          description: inputDescription,
-          value: typeOfValue == 'Entrada' ? inputValue: -inputValue,
-          type: typeOfValue
-        }])
-        setInputValue('')
-        setinputDescription('')
-      }}>Inserir Valor</button>
+
+        console.log(typeOfValue)
+        if (inputDescription !== '' && inputValue !== '' && typeOfValue !== 'null') {
+          
+          setListTransictions([...listTransictions, {
+            description: inputDescription,
+            value: typeOfValue === 'Entrada' ? inputValue: -inputValue,
+            type: typeOfValue
+          }])
+
+          toast.success('Transação criada com sucesso', {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: 0,
+            theme: "colored"
+          })
+        } else {
+          toast.error('Dados Inválidos', {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: 0,
+            theme: "colored"
+          })
+
+        }
+       
+          setInputValue('')
+          setinputDescription('')
+        }}>Inserir Valor</button>
+          
+        
+        <ToastContainer/> 
     </form>
 
   );

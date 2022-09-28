@@ -1,17 +1,19 @@
-import "./Card.css";
 import { FaTrash } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import "./Card.css";
+import 'react-toastify/dist/ReactToastify.css';
 
-function Card({ listTransictions, setListTransictions}) {
+function Card({ listTransictions, setListTransictions,newList}) {
   return (
     <>
-      {listTransictions.map((elt, i) => {
+      {newList.map((elt, i) => {
         const { description, value, type } = elt;
         const treatedNumber = (+value).toLocaleString("pt-BR", {
           style: "currency",
           currency: "BRL",
         });
 
-        if (type == "Entrada") {
+        if (type === "Entrada") {
           return (
             <li
               key={i}
@@ -19,12 +21,24 @@ function Card({ listTransictions, setListTransictions}) {
             >
               <div className="flex f-justify-between">
                 <p className="text__cardDescription">{description}</p>
-                <p className="text__card flex">
+                <p className="text__card flex f-align-center">
                   {treatedNumber}
                         <button onClick={() => {
-                          setListTransictions(listTransictions.filter(elt => elt.description !== description))         
+                        setListTransictions(listTransictions.filter((elt, eltI) => eltI !== i))  
+                    
+                        toast.success('Transação deletada com sucesso', {
+                            position: "top-center",
+                            autoClose: 1000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: false,
+                            draggable: true,
+                            progress: 0,
+                            theme: "colored"
+                          })
                         }}>
                     <FaTrash />
+
                   </button>
                 </p>
               </div>
@@ -32,7 +46,7 @@ function Card({ listTransictions, setListTransictions}) {
             </li>
           );
         }
-        if (type == "Saída") {
+        if (type === "Saída") {
           return (
             <li
               key={i}
@@ -43,7 +57,17 @@ function Card({ listTransictions, setListTransictions}) {
                 <p className="text__card flex">
                   {treatedNumber}
                         <button onClick={() => {
-                          setListTransictions(listTransictions.filter(elt => elt.description !== description))         
+                    setListTransictions(listTransictions.filter(elt => elt.description !== description)) 
+                    toast.success('Transação deletada com sucesso', {
+                      position: "top-center",
+                      autoClose: 1000,
+                      hideProgressBar: true,
+                      closeOnClick: true,
+                      pauseOnHover: false,
+                      draggable: true,
+                      progress: 0,
+                      theme: "colored"
+                    })
                         }}>
                     <FaTrash />
                   </button>
@@ -54,6 +78,7 @@ function Card({ listTransictions, setListTransictions}) {
           );
         }
       })}
+       <ToastContainer/> 
     </>
   );
 }

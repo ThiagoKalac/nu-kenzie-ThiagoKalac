@@ -2,18 +2,42 @@
     list-style: none;
     min-width: 366px;
     background-color: var(--gray-1);
-    height: 80px;
+    height: 125px;
     display: flex;
     padding: 16px;
     border-radius: 8px;
+    transition: ease-in-out 0.4s;
 }
+
+.card:hover{
+    box-shadow: 2px 4px 10px 3px #00000061;
+    transition: ease-in-out 0.4s;
+    transform: scale(0.95);
+    filter: brightness(1.1);
+
+}
+
 
 .card--deposit{
     border-left: 7px solid var(--color-secundary);
+    transition: ease-in 0.4s;
+}
+
+.card--deposit:hover{
+    border: 2px solid rgb(7, 155, 67);
+    border-left:7px solid rgb(7, 155, 67);
+    transition: ease-in 0.4s;
 }
 
 .card--moneyOut{
     border-left: 7px solid var(--gray-2);
+    transition: ease-in 0.4s;
+}
+
+.card--moneyOut:hover{
+    transition: ease-in 0.4s;
+    border: 2px solid crimson;
+    border-left: 7px solid crimson;
 }
 
 .card > div{
@@ -53,8 +77,13 @@
     color: var(--gray-1);
     background-color: var(--gray-4);
 }
+/* 
+@keyframes cardOut{
+   0% 
+} */
 
 @media(min-width:768px){
+
     .card > div{
         width: 100%;
     }
