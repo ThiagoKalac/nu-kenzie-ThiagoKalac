@@ -27,7 +27,7 @@ function Form({listTransictions,setListTransictions}) {
 
         <div className="div__value flex f-column">
           <label htmlFor="value">Valor</label>
-          <input className="input-df" type="number" name="value" id="value" placeholder="  1" value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
+          <input className="input-df" type="number" name="value" id="value" placeholder=" 1" value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
           <p className="textRS">R$</p>
         </div>
 
