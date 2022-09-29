@@ -57,7 +57,7 @@ function Card({ listTransictions, setListTransictions,newList}) {
                 <p className="text__card flex">
                   {treatedNumber}
                         <button onClick={() => {
-                    setListTransictions(listTransictions.filter(elt => elt.description !== description)) 
+                    setListTransictions(listTransictions.filter((eltDelete, eltI) => eltDelete.id !== elt.id))   
                     toast.success('Transação deletada com sucesso', {
                       position: "top-center",
                       autoClose: 1000,
