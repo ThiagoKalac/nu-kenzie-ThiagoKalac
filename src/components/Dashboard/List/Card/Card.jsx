@@ -1,4 +1,4 @@
-import { FaTrash } from "react-icons/fa";
+import { FaAcquisitionsIncorporated, FaKickstarterK, FaMandalorian, FaTrash } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import "./Card.css";
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +12,7 @@ function Card({ listTransictions, setListTransictions,newList}) {
           style: "currency",
           currency: "BRL",
         });
-
+             
         if (type === "Entrada") {
           return (
             <li
@@ -24,8 +24,8 @@ function Card({ listTransictions, setListTransictions,newList}) {
                 <p className="text__card flex f-align-center">
                   {treatedNumber}
                         <button onClick={() => {
-                        setListTransictions(listTransictions.filter((elt, eltI) => eltI !== i))  
-                    
+                    setListTransictions(listTransictions.filter((eltDelete, eltI) => eltDelete.id !== elt.id))  
+                           
                         toast.success('Transação deletada com sucesso', {
                             position: "top-center",
                             autoClose: 1000,

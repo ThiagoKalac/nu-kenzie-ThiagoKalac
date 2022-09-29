@@ -44,13 +44,15 @@ function Form({listTransictions,setListTransictions}) {
 
       <button className="btn btn__main" type="submit" onClick={() => {
 
-        console.log(typeOfValue)
+        console.log(listTransictions)
         if (inputDescription !== '' && inputValue !== '' && typeOfValue !== 'null') {
           
           setListTransictions([...listTransictions, {
             description: inputDescription,
             value: typeOfValue === 'Entrada' ? inputValue: -inputValue,
-            type: typeOfValue
+            type: typeOfValue,
+            id: (listTransictions.length === 0 ? 1 : listTransictions[listTransictions.length-1].id + 1)  
+            
           }])
 
           toast.success('Transação criada com sucesso', {
