@@ -12,7 +12,7 @@ function Card({ listTransictions, setListTransictions,newList}) {
           style: "currency",
           currency: "BRL",
         });
-             
+
         if (type === "Entrada") {
           return (
             <li
@@ -25,7 +25,7 @@ function Card({ listTransictions, setListTransictions,newList}) {
                   {treatedNumber}
                         <button onClick={() => {
                     setListTransictions(listTransictions.filter((eltDelete, eltI) => eltDelete.id !== elt.id))  
-                           
+
                         toast.success('Transação deletada com sucesso', {
                             position: "top-center",
                             autoClose: 1000,
@@ -78,7 +78,7 @@ function Card({ listTransictions, setListTransictions,newList}) {
           );
         }
       })}
-       <ToastContainer/> 
+      <ToastContainer/> 
     </>
   );
 }

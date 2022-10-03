@@ -10,10 +10,9 @@ function List({ listTransictions, setListTransictions }) {
   const [filterList, setFilter] = useState('Todos')
 
   const newList = listTransictions.filter(elt => {
-     return filterList === 'Todos'? true : elt.type === filterList
+    return filterList === 'Todos'? true : elt.type === filterList
   })
- 
-  console.log(listTransictions)
+
   
 
 

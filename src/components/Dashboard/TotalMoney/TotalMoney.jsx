@@ -14,7 +14,7 @@ function TotalMoney({ listTransictions }) {
             </div>
             <span className="spanDescriptionTotalMoney">O valor se refere ao saldo</span>
         </section>
-    )
+    )       
 }
 
 export default TotalMoney

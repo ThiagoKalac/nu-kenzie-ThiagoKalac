@@ -55,6 +55,7 @@
     padding: 16px;
     overflow: auto;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 @media(min-width:768px){

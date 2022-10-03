@@ -14,7 +14,7 @@ function Form({listTransictions,setListTransictions}) {
 
   
 
- 
+
   return (
     <form onSubmit={(event)=> event.preventDefault()}  className="container form flex f-column gap-2">
       <section className="section__description flex f-column">
@@ -78,7 +78,7 @@ function Form({listTransictions,setListTransictions}) {
           })
 
         }
-       
+
           setInputValue('')
           setinputDescription('')
         }}>Inserir Valor</button>
